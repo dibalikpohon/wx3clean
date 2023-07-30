@@ -1,6 +1,6 @@
 package dokter
 
-import "karuntos_wx3/domain/response"
+import "wx3clean/domain/response"
 
 type GetAllDokterUsecase interface {
 	Execute() (response response.GetDokterArray, err error)

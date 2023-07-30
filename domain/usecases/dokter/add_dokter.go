@@ -1,7 +1,7 @@
 package dokter
 
 import (
-	"karuntos_wx3/domain/request"
+	"wx3clean/domain/request"
 )
 
 type AddDokterUsecase interface {
