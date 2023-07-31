@@ -2,20 +2,20 @@ package repo
 
 // DaoT = DAO Type
 
-type GetAllAction[DaoT any] interface {
-	GetAll() ([]DaoT, error)
+type GetAllAction[EntityT any] interface {
+	GetAll() ([]EntityT, error)
 }
 
-type GetByIdAction[DaoT any] interface {
-	GetById(id string) (DaoT, error)
+type GetByIdAction[EntityT any] interface {
+	GetById(id string) (EntityT, error)
 }
 
-type InsertAction[DaoT any] interface {
-	Insert(dao DaoT) error
+type InsertAction[EntityT any] interface {
+	Insert(dao EntityT) error
 }
 
-type UpdateAction[DaoT any] interface {
-	Update(id string, dao DaoT) error
+type UpdateAction[EntityT any] interface {
+	Update(id string, dao EntityT) error
 }
 
 type DeleteAction interface {
