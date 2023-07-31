@@ -18,7 +18,7 @@ type UpdateAction[EntityT any] interface {
 	Update(id string, dao EntityT) error
 }
 
-type DeleteAction interface {
+type DeleteAction[EntityT any] interface {
 	Delete(id string) error
 }
 
