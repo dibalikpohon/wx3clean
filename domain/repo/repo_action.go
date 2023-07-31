@@ -22,10 +22,10 @@ type DeleteAction[EntityT any] interface {
 	Delete(id string) error
 }
 
-type BasicAction[DaoT any] interface {
-	GetAllAction[DaoT]
-	GetByIdAction[DaoT]
-	InsertAction[DaoT]
-	UpdateAction[DaoT]
-	DeleteAction
+type BasicAction[EntityT any] interface {
+	GetAllAction[EntityT]
+	GetByIdAction[EntityT]
+	InsertAction[EntityT]
+	UpdateAction[EntityT]
+	DeleteAction[EntityT]
 }
