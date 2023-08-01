@@ -3,7 +3,6 @@ package dokter
 import (
 	"wx3clean/domain/entities"
 	"wx3clean/domain/repo"
-	"wx3clean/domain/request"
 	"wx3clean/domain/usecases/dokter"
 )
 
@@ -12,8 +11,9 @@ type UpdateDokterUsecaseImpl struct {
 }
 
 // Execute implements dokter.UpdateDokterUsecase.
-func (*UpdateDokterUsecaseImpl) Execute(id string, request request.UpdateDokter) (err error) {
-	panic("unimplemented")
+func (u *UpdateDokterUsecaseImpl) Execute(id string, updatedDokter entities.Dokter) (err error) {
+	err = u.updateAction.Update(id, updatedDokter)
+	return
 }
 
 func NewUpdateDokterUsecase(updateAction repo.UpdateAction[entities.Dokter]) dokter.UpdateDokterUsecase {
