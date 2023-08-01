@@ -1,3 +1,5 @@
+//go:build a
+
 package repo
 
 type daodummy struct{}

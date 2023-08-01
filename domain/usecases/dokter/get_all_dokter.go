@@ -1,7 +1,9 @@
 package dokter
 
-import "wx3clean/domain/response"
+import (
+	"wx3clean/domain/entities"
+)
 
 type GetAllDokterUsecase interface {
-	Execute() (response response.GetDokterArray, err error)
+	Execute() (result []entities.Dokter, err error)
 }

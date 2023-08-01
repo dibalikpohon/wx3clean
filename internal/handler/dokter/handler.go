@@ -14,6 +14,13 @@ type dokterHandler struct {
 	updateDokter  usecases.UpdateDokterUsecase
 }
 
+// ServeHTTP implements handler.HandlerInterface.
+func (h *dokterHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	for _, v := range h.GetHandlers() {
+
+	}
+}
+
 // GetHandlers implements handler.HandlerInterface.
 func (h *dokterHandler) GetHandlers() (hs []handler.HandlerStruct) {
 	hs = append(hs,

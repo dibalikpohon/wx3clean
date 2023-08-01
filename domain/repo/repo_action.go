@@ -1,6 +1,6 @@
 package repo
 
-// DaoT = DAO Type
+// EntityT = Entity Type
 
 type GetAllAction[EntityT any] interface {
 	GetAll() ([]EntityT, error)
@@ -11,7 +11,7 @@ type GetByIdAction[EntityT any] interface {
 }
 
 type InsertAction[EntityT any] interface {
-	Insert(dao EntityT) error
+	Insert(dao EntityT) (string, error)
 }
 
 type UpdateAction[EntityT any] interface {

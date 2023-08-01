@@ -1,9 +1,9 @@
 package dokter
 
 import (
-	"wx3clean/domain/request"
+	"wx3clean/domain/entities"
 )
 
 type AddDokterUsecase interface {
-	Execute(request request.AddDokter) (err error)
+	Execute(dokter entities.Dokter) (newId string, err error)
 }
