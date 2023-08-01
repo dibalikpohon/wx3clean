@@ -11,8 +11,9 @@ type DeleteDokterUsecaseImpl struct {
 }
 
 // Execute implements dokter.DeleteDokterUsecase.
-func (*DeleteDokterUsecaseImpl) Execute(id string) (err error) {
-	panic("unimplemented")
+func (u *DeleteDokterUsecaseImpl) Execute(id string) (err error) {
+	err = u.deleteAction.Delete(id)
+	return
 }
 
 func NewDeleteDokterUsecase(deleteAction repo.DeleteAction[entities.Dokter]) dokter.DeleteDokterUsecase {
